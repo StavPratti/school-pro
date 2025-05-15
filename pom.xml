@@ -140,6 +140,16 @@
     </dependency>
   </dependencies>
 
+  <profiles>
+    <profile>
+      <id>prod</id>
+      <activation><activeByDefault>false</activeByDefault></activation>
+      <properties>
+        <logback.config.file>logback-prod.xml</logback.config.file>
+      </properties>
+    </profile>
+  </profiles>
+
   <build>
     <finalName>school7</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
