@@ -43,6 +43,7 @@ public class TeacherRestController {
             throw new EntityInvalidArgumentException("Teacher", String.join("\n", errors));
         }
 
+        // Here the new URI that is created, with the new id is built
         TeacherReadOnlyDTO readOnlyDTO = teacherService.insertTeacher(insertDTO);
         URI newResourceUri = uriInfo.getAbsolutePathBuilder()
                 .path(String.valueOf(readOnlyDTO.getId()))
@@ -121,8 +122,8 @@ public class TeacherRestController {
             @QueryParam("firstname") @DefaultValue("") String firstname,
             @QueryParam("lastname") @DefaultValue("") String lastname,
             @QueryParam("vat") @DefaultValue("") String vat,
-            @QueryParam("page") @DefaultValue("") Integer page,
-            @QueryParam("size") @DefaultValue("") Integer size
+            @QueryParam("page") @DefaultValue("0") Integer page,
+            @QueryParam("size") @DefaultValue("10") Integer size
     )
             throws EntityInvalidArgumentException {
         TeacherFiltersDTO filtersDTO = new TeacherFiltersDTO(firstname, lastname, vat);

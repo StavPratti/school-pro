@@ -263,7 +263,7 @@ public abstract class AbstractDAO<T extends IdentifiableEntity> implements IGene
 
         // Create query and apply pagination
         TypedQuery<T> query = em.createQuery(selectQuery);
-
+        addParametersToQuery(query, criteria);
         if (page != null && size != null) {
             query.setFirstResult(page * size);      // skip
             query.setMaxResults(size);

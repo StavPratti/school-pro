@@ -8,6 +8,7 @@ import jakarta.ws.rs.ext.ExceptionMapper;
 
 public class AppExceptionMapper implements ExceptionMapper<EntityGenericException> {
 
+    // Instead of catch in the controller
     @Override
     public Response toResponse(EntityGenericException exception) {
         Response.Status status = Response.Status.INTERNAL_SERVER_ERROR;

@@ -23,7 +23,7 @@
 <!--  Comment the following if config in JPAHelper-->
             <property name="hibernate.connection.provider_class" value="org.hibernate.hikaricp.internal.HikariCPConnectionProvider" />
             <property name="hibernate.hikari.dataSourceClassName" value="com.mysql.cj.jdbc.MysqlDataSource" />
-            <property name="hibernate.hikari.dataSource.url" value="jdbc:mysql://localhost:3306/school7dbcontextpro?serverTimezone=UTC" />
+            <property name="hibernate.hikari.dataSource.url" value="jdbc:mysql://localhost:3306/schooldbcontextpro?serverTimezone=UTC" />
             <property name="hibernate.hikari.dataSource.user" value="user7pro" />
             <property name="hibernate.hikari.dataSource.password" value="12345" />
             <property name="hibernate.hikari.maximumPoolSize" value="10" />
